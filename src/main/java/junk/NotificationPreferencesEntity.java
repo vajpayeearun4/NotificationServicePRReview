@@ -1,4 +1,4 @@
-package org.myproject.notificationpreferenceservice;
+package junk;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

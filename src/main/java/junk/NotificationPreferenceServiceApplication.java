@@ -1,4 +1,4 @@
-package org.myproject.notificationpreferenceservice;
+package junk;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
