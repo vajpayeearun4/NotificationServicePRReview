@@ -1,4 +1,4 @@
-package junk;
+package org.myproject.notificationpreferenceservice;
 
 import java.util.List;
 
