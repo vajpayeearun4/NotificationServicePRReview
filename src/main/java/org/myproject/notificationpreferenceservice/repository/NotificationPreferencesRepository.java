@@ -1,5 +1,6 @@
-package org.myproject.notificationpreferenceservice;
+package org.myproject.notificationpreferenceservice.repository;
 
+import org.myproject.notificationpreferenceservice.entity.NotificationPreferencesEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

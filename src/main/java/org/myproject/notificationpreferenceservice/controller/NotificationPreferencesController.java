@@ -1,5 +1,9 @@
-package org.myproject.notificationpreferenceservice;
+package org.myproject.notificationpreferenceservice.controller;
 
+import jakarta.validation.Valid;
+import org.myproject.notificationpreferenceservice.entity.NotificationPreferencesEntity;
+import org.myproject.notificationpreferenceservice.model.NotificationPreferenceDto;
+import org.myproject.notificationpreferenceservice.service.NotificationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -15,8 +19,8 @@ public class NotificationPreferencesController {
     private NotificationService notificationService;
 
     @PostMapping("/update")
-    public ResponseEntity<String> updatePreferences(@RequestBody NotificationPreferenceDto dto) {
-        notificationService.updatePreferences(dto.getUserId(), dto.getPreferences());
+    public ResponseEntity<String> updatePreferences(@Valid @RequestBody NotificationPreferenceDto dto) {
+        notificationService.updatePreferences(dto.getUserId(), dto.getName(), dto.getPreferences());
         return ResponseEntity.ok("Updated");
     }
 

@@ -1,4 +1,4 @@
-package org.myproject.notificationpreferenceservice;
+package org.myproject.notificationpreferenceservice.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -10,7 +10,10 @@ import jakarta.persistence.Table;
 public class NotificationPreferencesEntity {
 
     @Id
+    @Column(name = "user_id")
     private String userId;
+
+    private String name;
 
     @Column(name = "preferences")
     private String preferences; // comma separated values like "EMAIL,SMS"
@@ -29,5 +32,13 @@ public class NotificationPreferencesEntity {
 
     public void setPreferences(String preferences) {
         this.preferences = preferences;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }
